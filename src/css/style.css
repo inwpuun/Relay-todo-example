@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #484B6A;
+}
+
+body {
+    background: #FAFAFA url('/images/bg-desktop-light.jpg') no-repeat top center fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    user-select: none;
+    width: 100vw;
+    height: auto;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 38.5vw;
+    height: 15vh;
+    color: white;
+    margin: 30px 0 0 0;
+    transition: all 0.5s ease;
+}
+
+.top h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    cursor: default;
+}
+
+.top img {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 38.5vw;
+    height: 60px;
+    background: white;
+    border-radius: 5px;
+    margin: 0 0 0 0;
+}
+
+form .circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid #CACDE8;
+    border-radius: 50%;
+    margin: 0 15px 0 15px;
+}
+
+form .circle:hover {
+    border: 1px solid #6F7DFF;
+}
+
+form input[type='text'] {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #484B6A;
+    margin: 0 0 0 50px;
+}
+
+form input[type='text']::placeholder {
+    color: #a7a9b8;
+}
+
+.todo_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 38.5vw;
+    height: fit-content;
+    background: white;
+    border-radius: 5px;
+    margin: 25px 0 100px 0;
+    padding: 0 0 0 0;
+}
+
+.todo_list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 60px;
+    background: white;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #E0E0E0;
+    margin: 0;
+    padding: 0 0 0 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.todo_list li label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    margin: 0 0 0 15px;
+    padding: 0 0 0 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.todo_list input[type='checkbox'] {
+    display: none;   
+}
+
+.todo_list .checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid #CACDE8;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+.todo_list .checkbox:hover {
+    border: 1px solid #3A7BFD;
+}
+
+.todo_list input[type='checkbox']:checked ~ .checkbox {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-color: white;
+}
+
+.todo_list input[type='checkbox']:checked ~ .checkbox:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url('/images/icon-check.svg') no-repeat center center;
+    border-radius: 50%;
+}
+
+.todo_list input[type='checkbox']:checked ~ .checkbox:hover {
+    border: 1px solid #3A7BFD;
+}
+
+.todo_list li label p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.todo_list li label input[type='checkbox']:checked ~ p {
+    color: #D2D3DB;
+    text-decoration: line-through;
+}
+
+.todo_list li .btn-danger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 100%;
+    /* margin: 0 15px 0 15px; */
+    padding: 0 25px 0 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+}
+
+.todo_list label:hover ~ .btn-danger {
+    background: url('/images/icon-cross.svg') no-repeat center center;
+    border: none;
+}
+
+.todo_list li:hover ~ .btn-danger {
+    background: url('/images/icon-cross.svg') no-repeat center center;
+    border: none;
+}
+
+.todo_list .btn-danger:hover {
+    background: url('/images/icon-cross.svg') no-repeat center center;
+    border: none;
+}
+
+.todo_list .btn-danger:focus, .btn-danger:active {
+    border: none;
+    outline: none;
+}
+
+.todo_list .buttom-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 93%;
+    height: 50px;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    margin: 0 20px 0 15px;
+    padding: 0 0 0 0;
+    font-size: 12px;
+}
+
+.todo_list .buttom-bar p {
+    color: #9394A5;
+    margin: 0 0 0 0;
+    cursor: default;
+}
+
+.todo_list .buttom-bar .pagin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 16px;
+}
+
+.todo_list .buttom-bar .clear-completed {
+    cursor: pointer;
+    color: #9394A5;
+}
+
+.todo_list .buttom-bar .clear-completed:hover {
+    color: #484B6A;
+}
+
+.todo_list .buttom-bar .next {
+    cursor: pointer;
+    color: #3A7BFD;
+}
+
+.todo_list .buttom-bar .next:hover {
+    color: #484B6A;
+}

@@ -1,0 +1,50 @@
+{
+    "name": "web",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "generate:route": "node node_modules/route-generator/dist/index.js",
+        "relay": "relay-compiler"
+    },
+    "dependencies": {
+        "@capacitor/android": "^5.0.3",
+        "@capacitor/core": "^5.0.3",
+        "@capacitor/ios": "^5.0.3",
+        "@mycourseville/core-ui": "workspace:*",
+        "react": "link:../../node_modules/react",
+        "react-dom": "^18.2.0",
+        "react-relay": "^15.0.0",
+        "react-router-dom": "^6.11.2",
+        "relay-runtime": "^15.0.0",
+        "tailwind-variants": "^0.1.5"
+    },
+    "devDependencies": {
+        "@capacitor/cli": "^5.0.3",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@types/react-relay": "^14.1.4",
+        "@types/relay-runtime": "^14.1.11",
+        "@typescript-eslint/eslint-plugin": "^5.57.1",
+        "@typescript-eslint/parser": "^5.57.1",
+        "@vitejs/plugin-react-swc": "^3.0.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.38.0",
+        "eslint-config-react": "workspace:*",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.3.4",
+        "postcss": "^8.4.23",
+        "relay-compiler": "^15.0.0",
+        "tailwind-config": "workspace:*",
+        "tailwindcss": "^3.3.2",
+        "tsconfig": "workspace:*",
+        "typescript": "link:../../node_modules/typescript",
+        "vite": "^4.3.2",
+        "vite-plugin-inspect": "^0.7.28",
+        "vite-plugin-relay": "^2.0.0"
+    }
+}
